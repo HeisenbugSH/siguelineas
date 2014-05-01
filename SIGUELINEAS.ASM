@@ -1,5 +1,5 @@
         #INCLUDE <P16F84A.INC>
-        __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _Xt_OSC
+        __CONFIG _CP_OFF & _WDT_OFF & _PWRTE_ON & _XT_OSC
 
         #DEFINE SD  PORTA,0
         #DEFINE SC  PORTA,1
@@ -31,4 +31,4 @@ MAIN:   MOVLW b'00001110'
 ASS:    MOVWF PORTB
         GOTO MAIN
 
-END
+        END
