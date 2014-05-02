@@ -18,15 +18,14 @@ MAIN:   MOVLW b'00001110'
         BTFSS SD
         GOTO ASS
         
-        MOVLW b'00000111'
-        BTFSS SC
         MOVLW b'00001111'
-        BTFSS SC
+        BTFSC SC
         GOTO ASS
         
         MOVLW b'00000111'
         BTFSS SD
         GOTO ASS
+        GOTO MAIN
 
 ASS:    MOVWF PORTB
         GOTO MAIN
